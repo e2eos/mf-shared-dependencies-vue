@@ -1,5 +1,5 @@
 {
-  "name": "@vue-mf/shared-dependencies",
+  "name": "@mf/shared-dependencies-vue",
   "version": "0.1.0",
   "private": true,
   "main": "dist/js/app.js",
