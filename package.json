@@ -1,7 +1,8 @@
 {
-  "name": "vue-mf-shared-dependencies",
+  "name": "@vue-mf/shared-dependencies",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/js/app.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
@@ -15,6 +16,7 @@
     "vuex": "^3.1.2"
   },
   "devDependencies": {
+    "systemjs-webpack-interop": "^1.1.0",
     "@vue/cli-plugin-babel": "~4.2.0",
     "@vue/cli-plugin-eslint": "~4.2.0",
     "@vue/cli-plugin-router": "~4.2.0",
@@ -31,6 +33,21 @@
     "node-sass": "^4.12.0",
     "prettier": "^1.19.1",
     "sass-loader": "^8.0.2",
-    "vue-template-compiler": "^2.6.11"
-  }
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.42.1"
+  },
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,vue}": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "files": [
+    "dist",
+    "README",
+    "LICENSE"
+  ]
 }
